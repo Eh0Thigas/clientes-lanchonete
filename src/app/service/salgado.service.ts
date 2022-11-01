@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SalgadoService {
 
-  salgadosURL: "";
+  salgadosURL: "https://lanchonete-funtec-api.herokuapp.com/salgados";
 
   constructor(private http:HttpClient) { }
 

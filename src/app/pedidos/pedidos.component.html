@@ -1,29 +1,30 @@
 <main>
 <div>
+  
     <header>
         <h2>Salgados</h2>
     </header>
-    <section>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
-            <div class="card-body">
-              <h5 class="card-title">Nome do produto</h5>
-              <p class="card-text">Descrição do produto: nome e valor.</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+      <section>
+          <div class="card" style="width: 18rem;" *ngFor="let s of salgados" >
+              <img class="card-img-top" src="{{s.imagem}}" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h5 class="card-title">{{s.nomeSalgado}}</h5>
+                <p class="card-text">{{s.valor}}</p>
+                <a href="#" class="btn btn-primary">Adicionar</a>
+              </div>
             </div>
-          </div>
-    </section>
-
+      </section>
+   
     <hr>
     <header>
         <h2>Bebidas</h2>
     </header>
     <section>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+        <div class="card" style="width: 18rem;" *ngFor="let b of bebidas">
+            <img class="card-img-top" src="{{b.imagem}}" alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Nome do produto</h5>
-              <p class="card-text">Descrição do produto: nome e valor.</p>
+              <h5 class="card-title">{{b.nomeBebida}}</h5>
+              <p class="card-text">{{b.valor}}</p>
               <a href="#" class="btn btn-primary">Adicionar</a>
             </div>
           </div>
@@ -34,11 +35,11 @@
         <h2>Doces</h2>
     </header>
     <section>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Imagem de capa do card">
+        <div class="card" style="width: 18rem;" *ngFor="let d of doces">
+            <img class="card-img-top" src="{{d.imagem}}" alt="Imagem de capa do card">
             <div class="card-body">
-              <h5 class="card-title">Nome do produto</h5>
-              <p class="card-text">Descrição do produto: nome e valor.</p>
+              <h5 class="card-title">{{d.nomeDoces}}</h5>
+              <p class="card-text">{{d.valor}}</p>
               <a href="#" class="btn btn-primary">Adicionar</a>
             </div>
           </div>
