@@ -8,7 +8,7 @@ import { Clientes } from '../class/clientes';
 })
 export class ClienteService {
 
-  clienteURL = "";
+  clienteURL = "https://lanchonete-funtec-api.herokuapp.com/clientes";
   constructor(private http:HttpClient) { }
 
   criar(Clientes : Clientes): Observable<Object>{

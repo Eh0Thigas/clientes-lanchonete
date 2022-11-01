@@ -1,7 +1,7 @@
 export class Doces {
 
     id:number;
-    nomeBebida:String;
+    nomeDoces:String;
     descricao: String;
     valor: number;
     imagem:String;

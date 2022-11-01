@@ -8,7 +8,7 @@ import { Doces } from '../class/doces';
 })
 export class DoceService {
 
-  docesURl = "";
+  docesURl = "https://lanchonete-funtec-api.herokuapp.com/doces";
 
   constructor(private http:HttpClient) { }
   listar(): Observable<Doces[]>{

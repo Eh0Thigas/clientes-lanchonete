@@ -8,7 +8,7 @@ import { Bebidas } from '../class/bebidas';
 })
 export class BebidaService {
 
-  bebidasURL = "";
+  bebidasURL = "https://lanchonete-funtec-api.herokuapp.com/bebidas";
 
   constructor(private http:HttpClient) { }
 
