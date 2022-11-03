@@ -1,34 +1,40 @@
-<main>
-<div>
-  
-    <header>
-        <h2>Salgados</h2>
-    </header>
-      <section>
-          <div class="card" style="width: 18rem;" *ngFor="let s of salgados" >
-              <img class="card-img-top" src="{{s.imagem}}" alt="Imagem de capa do card">
-              <div class="card-body">
-                <h5 class="card-title">{{s.nomeSalgado}}</h5>
-                <p class="card-text">{{s.valor}}</p>
-                <a href="#" class="btn btn-primary">Adicionar</a>
-              </div>
-            </div>
-      </section>
-   
-    <hr>
+<main>  
+
     <header>
         <h2>Bebidas</h2>
     </header>
     <section>
         <div class="card" style="width: 18rem;" *ngFor="let b of bebidas">
-            <img class="card-img-top" src="{{b.imagem}}" alt="Imagem de capa do card">
+            <div class="card-img">
+              <img class="card-img-top" src="{{b.imagem}}" alt="Imagem de capa do card">
+            </div>
             <div class="card-body">
               <h5 class="card-title">{{b.nomeBebida}}</h5>
-              <p class="card-text">{{b.valor}}</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+              <p class="card-text">R$ {{b.valor}}</p>
+              <p class="card-text">{{b.descricao}}</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
           </div>
     </section>
+    
+    <hr>
+    
+    <header>
+        <h2>Salgados</h2>
+    </header>
+    <section>
+      <div class="card" style="width: 18rem;" *ngFor="let s of salgados">
+        <div class="card-img">
+          <img class="card-img-top" src="{{s.imagem}}" alt="Imagem de capa do card">
+        </div>
+          <div class="card-body">
+            <h5 class="card-title">{{s.nomeSalgado}}</h5>
+            <p class="card-text">R$ {{s.valor}}</p>
+            <p class="card-text">{{s.descricao}}</p>
+            <a href="#" class="btn btn-primary">Comprar</a>
+          </div>
+        </div>
+  </section>
 
     <hr>
     <header>
@@ -36,13 +42,16 @@
     </header>
     <section>
         <div class="card" style="width: 18rem;" *ngFor="let d of doces">
+          <div class="card-img">
             <img class="card-img-top" src="{{d.imagem}}" alt="Imagem de capa do card">
+          </div>
             <div class="card-body">
-              <h5 class="card-title">{{d.nomeDoces}}</h5>
-              <p class="card-text">{{d.valor}}</p>
-              <a href="#" class="btn btn-primary">Adicionar</a>
+              <h5 class="card-title">{{d.nomeDoce}}</h5>
+              <p class="card-text">R$ {{d.valor}}</p>
+              <p class="card-text">{{d.descricao}}</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
           </div>
     </section>
-</div>
+
 </main>
