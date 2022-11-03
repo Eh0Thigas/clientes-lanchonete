@@ -1,5 +1,36 @@
-<main>  
+<div id="carrinho">
+  <div id="itens">
+  <h4>CARRINHO</h4>
+        <div id="bebidas">
+          <h5>Bebidas</h5>
+          <div *ngFor="let b of pedido.bebida">
+            <p>{{b}}</p>
+            <button class="btn btn-danger btn-sm rounded-1" (click)="removerBebida(b)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
 
+        <div id="salgados">
+          <h5>Salgados</h5>
+          <div *ngFor="let s of pedido.salgado">
+            <p>{{s}}</p>
+            <button class="btn btn-danger btn-sm rounded-1" (click)="removerSalgado(s)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+
+        <div id="doces">
+          <h5>Doces</h5>
+          <div *ngFor="let d of pedido.doce">
+            <p>{{d}}</p>
+            <button class="btn btn-danger btn-sm rounded-1" (click)="removerDoce(d)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+    </div>
+    <div id="comprar">
+      <h4 id="valor">Valor: R${{pedido.valorTotal}}</h4>
+      <button class="btn btn-success">Finalizar</button>
+    </div>
+</div>  
+<main>
     <header>
         <h2>Bebidas</h2>
     </header>
@@ -12,7 +43,7 @@
               <h5 class="card-title">{{b.nomeBebida}}</h5>
               <p class="card-text">R$ {{b.valor}}</p>
               <p class="card-text">{{b.descricao}}</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <button class="btn btn-primary" (click)="comprarBebida(b.nomeBebida, b.valor)">Comprar</button>
             </div>
           </div>
     </section>
@@ -31,7 +62,7 @@
             <h5 class="card-title">{{s.nomeSalgado}}</h5>
             <p class="card-text">R$ {{s.valor}}</p>
             <p class="card-text">{{s.descricao}}</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
+            <button class="btn btn-primary" (click)="comprarSalgado(s.nomeSalgado, s.valor)">Comprar</button>
           </div>
         </div>
   </section>
@@ -49,9 +80,8 @@
               <h5 class="card-title">{{d.nomeDoce}}</h5>
               <p class="card-text">R$ {{d.valor}}</p>
               <p class="card-text">{{d.descricao}}</p>
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <button class="btn btn-primary" (click)="comprarDoce(d.nomeDoce, d.valor)">Comprar</button>
             </div>
           </div>
     </section>
-
 </main>

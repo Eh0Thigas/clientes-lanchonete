@@ -47,3 +47,67 @@ section{
     justify-content: center;
 }
 
+#carrinho{
+    margin-top: 10px;
+    width: 13%;
+    height: calc(100% - 140px);
+    position: fixed;
+    background-color: rgb(210, 210, 210);
+    border: 2px black solid;
+    border-radius: 15px;
+    z-index: 4;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#carrinho div{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#itens{
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    height: calc(100% - 100px);
+    width: 80%;
+}
+
+#itens::-webkit-scrollbar{
+    display: none;
+}
+
+#bebidas{
+    display: none;
+}
+
+#bebidas div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#salgados{
+    display: none;
+}
+
+#salgados div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#doces{
+    display: none;
+}
+#doces div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#comprar{
+    text-align: center;
+}
