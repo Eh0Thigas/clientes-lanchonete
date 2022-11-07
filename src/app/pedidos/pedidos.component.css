@@ -111,3 +111,34 @@ section{
 #comprar{
     text-align: center;
 }
+
+#finalizar{
+    position: fixed;
+    top: 35%;
+    height: 25%;
+    width: 50%;
+    right: 25%;
+    border: 2px solid black;
+    display: flex;
+    background-color: gray;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#finalizar input{
+    width: 50rem;
+    font-size: 15px;
+}
+
+#finalizar-section{
+    position: fixed;
+    background-color: rgba(194, 190, 190, 0.70);
+    width: 100%;
+    height: calc(100% - 120px);
+    display: none;
+    z-index: 5;
+    bottom: 50px;
+    right: 0;
+}

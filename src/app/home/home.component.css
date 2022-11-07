@@ -1,7 +1,20 @@
+
+
 p{
     color: black ;
 }
 
 h1{
     color: darkgoldenrod;
+}
+
+main{
+    width: 88%;
+    height: calc(100% - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 6%;
 }
