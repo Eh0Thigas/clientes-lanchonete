@@ -7,6 +7,7 @@ import { Pedido } from '../class/pedido';
 import { Salgados } from '../class/salgados';
 import { BebidaService } from '../service/bebida.service';
 import { DoceService } from '../service/doce.service';
+import { PedidoService } from '../service/pedido.service';
 import { SalgadoService } from '../service/salgado.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class PedidosComponent implements OnInit {
   salgados: Salgados[];
   pedido: Pedido
 
-  constructor(private bebidaService:BebidaService, private doceService:DoceService, private salgadoService:SalgadoService, private router:Router) { }
+  constructor(private bebidaService:BebidaService, private doceService:DoceService, private salgadoService:SalgadoService, private pedidoService:PedidoService,private router:Router) { }
 
   ngOnInit(): void {
     this.getBebidas();
@@ -114,4 +115,21 @@ export class PedidosComponent implements OnInit {
       document.getElementById("doces").style.display="none"
     }
   }
-}
+
+  finalizarPedido(){
+
+  }
+
+  nomeCliente(){
+    document.getElementById("finalizar-section").style.display = "block";
+    document.getElementById("carrinho").style.display = "none";
+  }
+
+  onSubmit(){
+      this.pedidoService.criar(this.pedido).subscribe(data =>{window.location.reload();}, error =>{
+      console.log(error)
+      } )
+      
+    }
+  }
+
