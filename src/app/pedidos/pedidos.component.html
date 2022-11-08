@@ -30,8 +30,13 @@
       <button class="btn btn-success" (click)="nomeCliente()">Finalizar</button>
     </div>
 </div>  
+
+<div id="cancelar">
+  <button class="btn btn-dark" (click)="cancelarPedido()">Cancelar pedido</button>
+</div>
+
 <main>
-    <header>
+  <header>
         <h2>Bebidas</h2>
     </header>
     <section>
@@ -92,6 +97,11 @@
           <input type="text" class="form-control" id="cliente"  [(ngModel)] = "pedido.cliente" name="cliente"autocomplete="off">
           <button class="btn btn-success" type="submit">Finalizar Pedido</button>
         </form>
+      </div>
+
+      <div id="final">
+        <h2>Pedido Finalizado</h2>
+        <img src="assets/img/certo.png" >
       </div>
       
     </section>
