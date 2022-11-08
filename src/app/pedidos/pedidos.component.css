@@ -163,3 +163,16 @@ section{
 #final img{
     height: 5rem;
 }
+
+#cancelar{
+    margin-top: 10px;
+    width: 13%;
+    position: fixed;
+    z-index: 4;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}

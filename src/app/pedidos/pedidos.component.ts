@@ -133,5 +133,10 @@ export class PedidosComponent implements OnInit {
       } )
       
     }
+
+
+  cancelarPedido(){
+    this.router.navigate(["/home"]);
+  }
   }
 
