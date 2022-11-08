@@ -142,3 +142,24 @@ section{
     bottom: 50px;
     right: 0;
 }
+
+#final{
+    color: green;
+    position: fixed;
+    top: 35%;
+    height: 25%;
+    width: 50%;
+    right: 25%;
+    border: 2px solid black;
+    display: none;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#final img{
+    height: 5rem;
+}

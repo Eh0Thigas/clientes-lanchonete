@@ -117,7 +117,9 @@ export class PedidosComponent implements OnInit {
   }
 
   finalizarPedido(){
-
+    document.getElementById("finalizar").style.display = "none";
+    document.getElementById("final").style.display = "flex";
+    setTimeout(() => this.router.navigate(["/home"]), 5000);
   }
 
   nomeCliente(){
@@ -126,7 +128,7 @@ export class PedidosComponent implements OnInit {
   }
 
   onSubmit(){
-      this.pedidoService.criar(this.pedido).subscribe(data =>{window.location.reload();}, error =>{
+      this.pedidoService.criar(this.pedido).subscribe(data =>{this.finalizarPedido();}, error =>{
       console.log(error)
       } )
       
