@@ -32,7 +32,7 @@ export class PedidosComponent implements OnInit {
     this.pedido.bebida = new Array
     this.pedido.doce = new Array
     this.pedido.salgado = new Array
-    this.pedido.valorTotal = 0.00
+    this.pedido.valorTotal = 0
   }
 
   private getBebidas(){
@@ -56,6 +56,8 @@ export class PedidosComponent implements OnInit {
     }
     this.pedido.bebida.push(bebida)
     this.pedido.valorTotal += valor
+    this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
+    
   }
 
   removerBebida(bebida:String){
@@ -63,6 +65,7 @@ export class PedidosComponent implements OnInit {
     for (const bebidas of this.bebidas) {
         if(bebidas.nomeBebida == bebida){
           this.pedido.valorTotal -= bebidas.valor
+          this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
         }
     }
     if(this.pedido.bebida.length == 0){
@@ -79,6 +82,7 @@ export class PedidosComponent implements OnInit {
     }
     this.pedido.salgado.push(salgado)
     this.pedido.valorTotal += valor
+    this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
   }
 
   removerSalgado(salgado:String){
@@ -86,6 +90,7 @@ export class PedidosComponent implements OnInit {
     for (const salgados of this.salgados) {
         if(salgados.nomeSalgado == salgado){
           this.pedido.valorTotal -= salgados.valor
+          this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
         }
     }
     if(this.pedido.salgado.length == 0){
@@ -102,6 +107,7 @@ export class PedidosComponent implements OnInit {
     }
     this.pedido.doce.push(doce)
     this.pedido.valorTotal += valor
+    this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
   }
 
   removerDoce(doce:String){
@@ -109,6 +115,7 @@ export class PedidosComponent implements OnInit {
     for (const doces of this.doces) {
         if(doces.nomeDoce == doce){
           this.pedido.valorTotal -= doces.valor
+          this.pedido.valorTotal = parseFloat(this.pedido.valorTotal.toFixed(2));
         }
     }
     if(this.pedido.doce.length == 0){
